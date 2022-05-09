@@ -7,4 +7,6 @@ services:
       dockerfile: Dockerfile
     image: alcnaka/pyjtalk:0.1.0
     volumes:
-      - ./:/usr/src/pyjtalk:rw
+      - ./pyjtalk:/usr/src/pyjtalk/pyjtalk
+      - ./script:/usr/src/pyjtalk/script
+      - ./dist:/usr/src/pyjtalk/dist
