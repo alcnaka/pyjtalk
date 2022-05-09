@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  pyjtalk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: alcnaka/pyjtalk:0.1.0
+    volumes:
+      - ./:/usr/src/pyjtalk:rw
