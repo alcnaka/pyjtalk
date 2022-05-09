@@ -8,7 +8,7 @@ PYJTALK_DEFAULT_VOICE_PATH = os.getenv("PYJTALK_DEFAULT_VOICE_PATH") \
     or "/etc/pyjtalk/voice/mei/mei_normal.htsvoice"
 
 PYJTALK_DEFAULT_DICTIONARY_PATH = os.getenv("PYJTALK_DEFAULT_DICTIONARY_PATH") \
-    or "/etc/pyjtalk/dictionary"
+    or "/var/lib/mecab/dic/open-jtalk/naist-jdic/"
 
 
 logger.info("config loaded")
