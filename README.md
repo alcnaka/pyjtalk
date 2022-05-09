@@ -9,7 +9,13 @@
 
 ## Usage
 
+### CLI
+
 `docker-compose run --rm pyjtalk "これはテストです"`
+
+### Poetry
+
+`poetry add git+ssh://git@github.com:alcnaka/pyjtalk#main`
 
 ## Debug
 
