@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyjtalk"
-version = "0.1.0"
+version = "0.2.0"
 description = "OpenJTalk Wrapper for Python"
 authors = ["alcnaka <47954083+alcnaka@users.noreply.github.com>"]
 
