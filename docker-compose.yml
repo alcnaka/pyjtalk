@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: alcnaka/pyjtalk:0.1.0
+    image: alcnaka/pyjtalk:0.2.0
     volumes:
       - ./pyjtalk:/usr/src/pyjtalk/pyjtalk
       - ./script:/usr/src/pyjtalk/script

@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.9
 
 ARG OPENJTALK_VERSION=1.11
 
@@ -22,6 +22,7 @@ WORKDIR /usr/src/pyjtalk
 
 ENV POETRY_VIRTUALENVS_CREATE=false
 COPY pyproject.toml poetry.lock /usr/src/pyjtalk/
+COPY pyjtalk/ /usr/src/pyjtalk/pyjtalk
 RUN poetry install
 
 ENTRYPOINT ["python3", "-m", "pyjtalk"]
