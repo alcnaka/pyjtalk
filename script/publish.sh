@@ -4,7 +4,7 @@
 
 version="0.2.0"
 
-docker-compose build
+docker-compose build --no-cache
 docker tag alcnaka/pyjtalk:$version alcnaka/pyjtalk:latest
 
 docker push alcnaka/pyjtalk:$version

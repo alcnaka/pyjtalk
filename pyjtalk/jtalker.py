@@ -80,16 +80,16 @@ class JTalker(BaseJTalker):
         context: str,
         ** kwargs,
     ) -> bytes:
-        """_summary_
+        """Synthesize and return byte in wav format.
 
         Args:
-            context (str): _description_
+            context (str): sentence to be synthesized.
 
         Raises:
-            RuntimeError: _description_
+            RuntimeError: raise when openjtalk command failed.
 
         Returns:
-            Optional[bytes]: _description_
+            Optional[bytes]: synthesized audio data (wav format)
         """
         jtalk_cmd = self.construct_command(**kwargs)
         logger.debug("cmd: " + jtalk_cmd)
@@ -114,6 +114,12 @@ class JTalker(BaseJTalker):
         filename: str = DEFAULT_FILE_NAME,
         **kwargs
     ) -> None:
+        """Synthesize and generate a wav file.
+
+        Args:
+            context (str): _description_
+            filename (str, optional): _description_. Defaults to DEFAULT_FILE_NAME.
+        """
         stdout = self.synthesize(context, **kwargs)
 
         with open(filename, mode='bw') as f:
@@ -127,6 +133,17 @@ class AsyncJTalker(BaseJTalker):
         context: str,
         ** kwargs,
     ) -> bytes:
+        """Synthesize and return byte in wav format.
+
+        Args:
+            context (str): sentence to be synthesized.
+
+        Raises:
+            RuntimeError: raise when openjtalk command failed.
+
+        Returns:
+            Optional[bytes]: synthesized audio data (wav format)
+        """
         jtalk_cmd = self.construct_command(**kwargs)
         logger.debug("cmd: " + jtalk_cmd)
         logger.debug("context: " + context)
@@ -152,6 +169,12 @@ class AsyncJTalker(BaseJTalker):
         filename: str = DEFAULT_FILE_NAME,
         **kwargs
     ) -> None:
+        """Synthesize and generate a wav file.
+
+        Args:
+            context (str): _description_
+            filename (str, optional): _description_. Defaults to DEFAULT_FILE_NAME.
+        """
         stdout = await self.synthesize(context, **kwargs)
 
         with open(filename, mode='bw') as f:

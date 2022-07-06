@@ -6,6 +6,7 @@ authors = ["alcnaka <47954083+alcnaka@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"
